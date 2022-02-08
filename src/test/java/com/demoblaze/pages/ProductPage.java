@@ -1,5 +1,6 @@
 package com.demoblaze.pages;
 
+import com.demoblaze.utilities.BrowserUtils;
 import com.demoblaze.utilities.Driver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -22,9 +23,12 @@ public class ProductPage extends BasePage{
 
     public void addToCart(){
         addToCartElement.click();
-        WebDriverWait wait=new WebDriverWait(Driver.get(),10);
+      //  WebDriverWait wait=new WebDriverWait(Driver.get(),10);
+        BrowserUtils.waitFor(3);
+
         Alert alert=Driver.get().switchTo().alert();
-        wait.until(ExpectedConditions.alertIsPresent());
+
+       // wait.until(ExpectedConditions.alertIsPresent());
         alert.accept();
         }
 

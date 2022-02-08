@@ -9,9 +9,9 @@ public class BasePage {
     public BasePage(){
         PageFactory.initElements(Driver.get(),this);
     }
-    @FindBy(xpath = "//a[.='Home']")
+    @FindBy(xpath = "//a[contains(.,'Home')]")
     public WebElement home;
 
-    @FindBy(xpath = "//a[.='Cart']")
+    @FindBy(xpath = "//a[contains(.,'Cart')]")
     public WebElement cart;
 }

@@ -4,4 +4,5 @@ Feature: Adidas Order Placement Functionality
   @wip
   Scenario: Placing a successful order
     Given User is on the home page
-    When User adds "product" "category"
+    When User adds "Sony vaio i5" "Laptops"
+    And User adds "Dell i7 8gb" "Laptops"
